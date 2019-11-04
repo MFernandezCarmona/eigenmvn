@@ -1,6 +1,12 @@
 eigenmvn
 ========
 
+### This fork adds two things:
+* pdf calculation for samples
+* multivariate distribution build from csv data (See data example in data folder for format)                                                                               
+
+
+
 ### Multivariate Normal distribution sampling using C++11 and Eigen matrices.                                                                                   
 This is taken from http://stackoverflow.com/questions/16361226/error-while-creating-object-from-templated-class           (also see http://lost-found-wandering.blogspot.fr/2011/05/sampling-from-multivariate-normal-in-c.html)                                                      
 
@@ -11,6 +17,17 @@ I have been unable to contact the original author, and I've performed the follow
 
  * turned matrix fixed sizes into dynamic sizes.
  
+#### (new) Usage
+Compile the test exe with
+```
+g++ -I/usr/include -I/usr/include/eigen3 -g -std=c++11 test_eigenmvn2.cc -o te2
+```
+run with 
+```
+./te2 ./data/20db_NormalizedDataset.csv 6
+```
+You should  have on screen as many samples from the distribution as the second parameter.
+
 #### Usage
 Compile the test exe with
 ```
